@@ -1,4 +1,4 @@
-package com.zhankartsev.task_manager;
+package com.zhankartsev.taskmanager;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
