@@ -26,4 +26,22 @@ public class TaskService {
         return taskRepository.save(task);
     }
 
+    // method : update task
+
+    public Task updateTask(Long id, Task taskDetails) {
+        Task task = taskRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Задача с ID " + id + " не найдена"));
+
+        task.setTitle(taskDetails.getTitle());
+        task.setDescription(taskDetails.getDescription());
+        task.setStatus(taskDetails.getStatus());
+
+        return taskRepository.save(task);
+
+    }
+
+    public void deleteTask(Long id) {
+        taskRepository.deleteById(id);
+    }
+
 }
